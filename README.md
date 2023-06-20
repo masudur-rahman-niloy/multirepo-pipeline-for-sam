@@ -55,3 +55,16 @@ command.
  * `cdk docs`        open CDK documentation
 
 Enjoy!
+
+To deploy the project use the following commands
+
+
+```
+$ cdk bootstrap
+```
+
+Then
+
+```
+$ cdk deploy
+```
