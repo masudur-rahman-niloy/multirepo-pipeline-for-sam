@@ -1,7 +1,6 @@
 
-# Welcome to your CDK Python project!
+# Welcome to Multi Repo Pipeline project!
 
-This is a blank project for CDK development with Python.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
