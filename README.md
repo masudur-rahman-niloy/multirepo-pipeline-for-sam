@@ -68,3 +68,7 @@ Then
 ```
 $ cdk deploy
 ```
+
+Follow this blog post for a step by step guide 
+
+[https://medium.com/@niloy369/create-a-multi-repo-pipeline-for-aws-sam-applications-using-aws-cdk-898e6c688332](https://medium.com/@niloy369/create-a-multi-repo-pipeline-for-aws-sam-applications-using-aws-cdk-898e6c688332)
