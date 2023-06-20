@@ -1,0 +1,21 @@
+version: 0.2 
+        
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+  build:
+    on-failure: ABORT
+    commands:
+      - echo "Starting SAM packaging `date` in `pwd`"
+      - aws cloudformation package --template-file template.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file package.yaml
+  post_build:
+
+    commands:
+      - echo "SAM packaging completed on `date`"
+
+artifacts:
+  files:
+    - package.yaml
+  name: artifact-name
+  discard-paths: yes

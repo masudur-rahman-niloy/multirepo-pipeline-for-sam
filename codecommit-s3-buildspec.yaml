@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - pip install git-remote-codecommit botocore
+  build:
+    commands:
+      - git clone -b $REFERENCE_NAME codecommit::$REPO_REGION://$REPOSITORY_NAME
+      - cd $REPOSITORY_NAME
+      - zip -r $ZIP_SOURCE_FILE_NAME . -x ".git/*"
+      - aws s3api put-object --bucket $BUCKET --key $ZIP_SOURCE_FILE_NAME --body $ZIP_SOURCE_FILE_NAME --tagging "repository=$REPOSITORY_NAME&branch=$REFERENCE_NAME"

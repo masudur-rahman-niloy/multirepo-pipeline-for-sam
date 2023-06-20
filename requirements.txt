@@ -1,2 +1,6 @@
 aws-cdk-lib==2.84.0
 constructs>=10.0.0,<11.0.0
+
+boto3~=1.24.89
+pydantic~=1.10.2
+PyYAML~=6.0
